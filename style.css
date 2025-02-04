@@ -1,0 +1,889 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'orbitron';
+}
+
+body {
+    background-color: #000000;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.social a i {
+    text-decoration: none;
+    color: #fff !important;
+    margin-right: 10px;
+}
+
+header nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+header nav .logo {
+    cursor: pointer;
+    height: 70px;
+    padding: 5px;
+}
+
+/* Estilo por defecto del menú */
+header nav .menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav .menu a {
+    color: #EBFF2C;
+    position: relative;
+}
+
+header nav .menu a:hover{
+    color: #fff;
+}
+
+header nav .menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #EBFF2C;
+    transition: 0.4s;
+}
+
+.menu{
+    font-size: 0.9rem;
+}
+
+header nav .menu a:hover::after {
+    width: 100%;
+}
+
+/* Icono de hamburguesa */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url(/img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .text {
+    width: 90%;
+    margin: auto;
+}
+
+.hero .text h4 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.hero .text h1 {
+    color: #fff;
+    font-size: 65px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.hero .text h1 span {
+    color: #EBFF2C;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.hero .text p {
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.hero .text .btn {
+    padding: 10px 30px;
+    background-color: #EBFF2C;
+    text-transform: uppercase;
+    color: #252525;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 2px solid #252525;
+    transition: 0.3s;
+}
+
+.hero .text .btn:hover {
+    background-color: transparent;
+    color: #EBFF2C;
+}
+
+/* section */
+.section-img {
+    width: 100%;
+    height: 100%;
+    /* background: url(/img/image.webp); */
+    background: url(/img/PATRON\ 1.png);
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.section-div1 {
+    text-align: center;
+    color: #fff;
+}
+
+.section-h2 {
+    font-size: 55px;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 6%;
+}
+
+.card {
+    background-color: #252525;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #EBFF2C;
+    width: 30%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: #EBFF2C;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #bab6b6;
+}
+
+.fas {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .fas {
+    transform: scale(1.2);
+}
+
+/* General styles for the section */
+.car-section {
+    display: flex;
+    flex-direction: column;
+    /* Cambiado para apilar las cards verticalmente */
+    align-items: flex-start;
+    /* Alinea las cards a la izquierda */
+    /* Full screen height */
+    padding: 30px 20px;
+    background-image: url('/img/descarga.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Overlay to darken the background for readability */
+.car-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Darkens the background */
+}
+
+/* Flexbox layout for the categories */
+.car-category {
+    position: relative;
+    width: 50%;
+    /* Ahora las cards ocupan el 100% del ancho */
+    background: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent black background for each card */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    /* Alineación del texto a la izquierda */
+    margin-bottom: 20px;
+    /* Espacio entre las cards */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.car-category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.car-h2 {
+    color: #fff;
+    font-size: 55px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.category-content h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+}
+
+.category-content p {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #252525;
+    line-height: 1.5;
+}
+
+/* Specific styles for each category */
+.basic {
+    background-color: rgba(235, 255, 44, 0.5) !important;
+    /* Basic category background */
+}
+
+.offroad {
+    background-color: rgba(235, 255, 44, 0.5) !important;
+    /* Orange tone for 4x4 category */
+}
+
+.luxury {
+    background-color: rgba(235, 255, 44, 0.5) !important;
+    /* Blue tone for Luxury category */
+}
+
+
+.book-a-car {
+    text-align: center;
+    border-bottom: 1px solid #ffffff85;
+    padding: 100px;
+    color: white;
+    background: linear-gradient(45deg, #e0e0e0, #000000, #333333, #111111);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .book-h2 {
+    font-size: 55px;
+    color: #fff;
+  }
+  
+  .book-a-car p {
+    margin-bottom: 2rem;
+    color: #fff;
+    opacity: 0.5;
+  }
+  
+  .car-options {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .car-card {
+    border-radius: 8px;
+    padding: 1rem;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .car-card img {
+    max-width: 100%;
+    max-height: 40%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .car-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    opacity: 0.6;
+  }
+  
+  .car-card p {
+    margin-bottom: 1rem;
+    color: #252525;
+  }
+  
+  .car-card button {
+    background-color: #EBFF2C;
+    color: #252525;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .car-card button:hover {
+    background-color: #000;
+    border: 2px solid #252525;
+    color: #EBFF2C;
+  }
+  
+
+/* Sección general */
+.drivers {
+    display: flex;
+    flex-direction: column; /* Dirección en columna */
+    background-color: #0d0d0d;
+    color: #fff;
+    text-align: right; /* Alinea texto hacia la derecha */
+    background-image: url('/img/jeep.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+}
+
+.drivers-header { /* Ajusta la separación del título */
+    margin-top: -50px;
+    margin-right: -70px;
+}
+
+.drivers-header h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.drivers-header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.drivers-content {
+    display: flex; /* Flex para controlar las cards */
+    flex-direction: row; /* Las tarjetas se organizan en fila si caben */
+    flex-wrap: wrap; /* Permite que se ajusten si no caben */
+    justify-content: center; /* Centra las cards horizontalmente */
+    gap: 20px; /* Espaciado entre tarjetas */
+    margin-top: 400px;
+    margin-bottom: -70px; /* Empuja este contenedor al final de la sección */
+}
+
+.driver-card {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Define un ancho fijo */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #EBFF2C;
+}
+
+.driver-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.driver-card:hover img {
+    transform: scale(1.1); /* Zoom sutil */
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #EBFF2C;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.driver-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.card-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.contact {
+    background-color: #f7f7f7;
+    color: #fff;
+    text-align: center;
+    padding:200px 20px;
+    background-image: url(/img/istockphoto-1440163137-640x640.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #ffffff85;
+}
+
+.contact-header h2 {
+    font-size: 55px;
+    color: #fff; /* Rojo destacado */
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    margin-bottom: 70px;
+    opacity: 0.8;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #EBFF2C;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    border: 1px solid #252525;
+}
+
+.contact-item img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #252525;
+    font-weight: bold;
+}
+
+.contact-item a {
+    color: #252525;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+#wpp{
+    color: #000000;
+    height: 20px;
+    width: 20px;
+}
+
+
+
+.wpp-icon {
+    position: fixed;
+    top: 85%;
+    right: 20px;
+    z-index: 99;
+}
+
+
+.footer {
+    background: #333;
+    color: #ffffffb0;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #000000, #2d2c2c);
+
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #b80a0a;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffffb0;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    /* Asegura que los íconos sean blancos */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+.fa-brands.fa-instagram{
+    color: #fff;
+}
+
+.fa-brands.fa-facebook-f{
+    color: #fff;
+}
+
+.fa-brands.fa-whatsapp{
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hero {
+        padding: 80px 0px;
+    }
+
+    .menu {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        padding: 0;
+        overflow: hidden;
+        max-height: 0;
+        /* Menú oculto */
+        transition: max-height 0.4s ease-in-out;
+    }
+
+    header nav .menu {
+        gap: 0;
+    }
+
+    .menu.active {
+        max-height: 300px;
+        /* Altura para mostrar enlaces */
+    }
+
+    .social {
+        display: none;
+    }
+
+    .menu a {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .card {
+        width: 75%;
+        /* En pantallas medianas, las cards ocupan el 45% del ancho */
+    }
+
+    .car-section {
+        padding: 20px;
+    }
+
+    .car-category {
+        width: 100%;
+        /* Asegura que las cards ocupen el 100% del ancho en pantallas pequeñas */
+    }
+
+    .about-us {
+        margin-top: 10%;
+    }
+
+    .drivers-content{
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .drivers{
+        padding: 10px;
+    }
+
+    .drivers-header{
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    .contact{
+        padding: 50px 20px;
+    }
+
+}
+
+@media (max-width:500px) {
+    .hero .text h4 {
+        font-size: 25px;
+    }
+
+    .hero .text h1 {
+        font-size: 50px;
+    }
+
+    .hero .text h1 span {
+        font-size: 55px;
+    }
+
+    .wpp-i {
+        height: 50px !important;
+        width: 50px !important;
+        right: 20px;
+    }
+
+    .card {
+        width: 70%;
+        /* En pantallas pequeñas, las cards ocupan el 100% */
+    }
+
+    .section-h2 {
+        font-size: 50px;
+    }
+
+    .about-us {
+        margin-top: 10%;
+    }
+
+    .drivers-header h2 {
+        font-size: 40px;
+    }
+
+    .drivers-header p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .drivers-content{
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .drivers{
+        padding: 10px;
+    }
+
+    .drivers-header{
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    .contact{
+        padding: 50px 20px;
+    }
+
+    .book-h2{
+        font-size: 50px;
+    }
+
+    .book-a-car{
+        padding: 30px;
+    }
+
+    .contact-header p{
+        font-size: 1rem;
+    }
+
+    .contact-header h2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width:400px) {
+    .hero .text h4 {
+        font-size: 20px;
+    }
+
+    .hero .text h1 {
+        font-size: 45px;
+    }
+
+    .hero .text h1 span {
+        font-size: 60px;
+    }
+
+    .wpp-i {
+        height: 50px !important;
+        width: 50px !important;
+    }
+
+    .drivers-header h2 {
+        font-size: 2rem;
+    }
+
+    .section-h2 {
+        font-size: 40px;
+    }
+
+    .car-h2 {
+        font-size: 40px;
+        margin-left: 55px;
+    }
+
+    .book-h2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .about-us {
+        flex-direction: column;
+        /* En pantallas muy pequeñas, las cards se apilan verticalmente */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        /* Las cards ocupan el 90% en pantallas muy pequeñas */
+    }
+}
+
+.img-1{
+    max-width: 35%;
+    margin-bottom: 20px;
+}
+
+.p-1{
+    font-size: 18px;
+}
+
+.fondos{
+    width: 100%;
+    height: 10px; /* Ajusta la altura según el diseño */
+    background-image: url('/img/PATRON\ 3.png'); /* Ruta de la imagen */
+    background-repeat: repeat-x; /* Se repite solo horizontalmente */
+    background-size: contain; /* Ajusta la altura */
+}
+
+h2{
+    font-weight: bold;
+}
+
+.rsr{
+    text-transform: uppercase;
+}
