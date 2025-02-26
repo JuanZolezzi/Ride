@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alquila autos de lujo y choferes privados. Servicio 24/7 en Buenos Aires.">
+<meta name="keywords" content="alquiler de autos, chofer privado, autos de lujo, 4x4, Buenos Aires">
     <title>Ride</title>
 
     <!-- Link Font Awesome -->
@@ -42,7 +44,7 @@
         <div class="text">
             <img src="img/LOGOTIP-POS-CON-REGISTER.png" alt="" class="img-1">
             <p class="p-1">Siempre en movimiento</p>
-            <a href="https://wa.me/1125899915" class="btn">Alquilar</a>
+            <a href="https://wa.me/1125899915" class="btn">Consultar</a> <!-- que palabra??? -->
         </div>
     </div>
 
@@ -263,6 +265,11 @@
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        const toggle = document.getElementById('theme-toggle');
+toggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+});
     </script>
 </body>
 

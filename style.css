@@ -1,6 +1,7 @@
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+
 * {
     padding: 0;
     margin: 0;
@@ -406,7 +407,7 @@ header nav .menu a:hover::after {
     background-color: #0d0d0d;
     color: #fff;
     text-align: right; /* Alinea texto hacia la derecha */
-    background-image: url('/img/jeep.jpg');
+    background-image: url('/img/ruedas-coches-deportivos-suelo-sobre-fondo-negro_312869-112.avif');
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
@@ -440,8 +441,8 @@ header nav .menu a:hover::after {
     flex-wrap: wrap; /* Permite que se ajusten si no caben */
     justify-content: center; /* Centra las cards horizontalmente */
     gap: 20px; /* Espaciado entre tarjetas */
-    margin-top: 400px;
-    margin-bottom: -70px; /* Empuja este contenedor al final de la sección */
+    margin-top: 50px;
+    margin-bottom: -50px; /* Empuja este contenedor al final de la sección */
 }
 
 .driver-card {
@@ -887,3 +888,22 @@ h2{
 .rsr{
     text-transform: uppercase;
 }
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.wpp-icon {
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
