@@ -245,26 +245,27 @@
         }, 2200);
 
         // Menú hamburguesa con animación
-        const hamburger = document.querySelector('.hamburger');
-        const menu = document.querySelector('.menu');
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
 
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('active'); // Agregar o quitar la clase 'active'
-        });
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active'); // Agregar o quitar la clase 'active'
+    menu.classList.toggle('active'); // Agregar o quitar la clase 'active' al menú
+});
 
-        const menuLinks = document.querySelectorAll('nav a[href^="#"]');
+const menuLinks = document.querySelectorAll('nav a[href^="#"]');
 
-        menuLinks.forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault(); // Prevenir la acción por defecto (salto inmediato)
+menuLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevenir la acción por defecto (salto inmediato)
 
-                const targetId = this.getAttribute('href').substring(1); // Obtiene el ID de la sección destino
-                const targetSection = document.getElementById(targetId);
+        const targetId = this.getAttribute('href').substring(1); // Obtiene el ID de la sección destino
+        const targetSection = document.getElementById(targetId);
 
-                // Desplaza a la sección correspondiente con un desplazamiento suave
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
+        // Desplaza a la sección correspondiente con un desplazamiento suave
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    });
+});
 
         const toggle = document.getElementById('theme-toggle');
 toggle.addEventListener('click', () => {

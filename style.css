@@ -85,6 +85,7 @@ header nav .menu a:hover::after {
     font-size: 24px;
     color: #fff;
     cursor: pointer;
+    transition: transform 0.3s ease; /* Transición suave para la rotación */
 }
 
 /* Hero Section */
@@ -665,10 +666,44 @@ header nav .menu a:hover::after {
         display: block;
     }
 
+    .hamburger.active i {
+        transform: rotate(90deg); /* Rota 90 grados */
+    }
+
     .hero {
         padding: 80px 0px;
     }
 
+    .drivers-header h2,
+    .drivers-header p{
+        text-align: center;
+    }
+
+    .book-h2, .contact-header h2{
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+
+    .section-h2, .car-h2{
+        font-size: 40px;
+    }
+
+    .drivers-header h2{
+        font-size: 40px;
+    }
+
+    .car-section > div {
+        width: 100%;
+    }
+
+    .car-h2 {
+        margin-left: 0; /* Elimina el margen izquierdo */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 40px; /* Ajusta el tamaño si es necesario */
+        text-align: center;
+    }
     .menu {
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.9);
@@ -737,6 +772,11 @@ header nav .menu a:hover::after {
         padding: 50px 20px;
     }
 
+    
+    .category-content h2{
+        font-size: 25px;
+    }
+
 }
 
 @media (max-width:500px) {
@@ -764,7 +804,7 @@ header nav .menu a:hover::after {
     }
 
     .section-h2 {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .about-us {
@@ -799,7 +839,7 @@ header nav .menu a:hover::after {
     }
 
     .book-h2{
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .book-a-car{
@@ -812,6 +852,10 @@ header nav .menu a:hover::after {
 
     .contact-header h2{
         font-size: 40px;
+    }
+
+    .category-content h2{
+        font-size: 25px;
     }
 }
 
@@ -833,21 +877,27 @@ header nav .menu a:hover::after {
         width: 50px !important;
     }
 
-    .drivers-header h2 {
-        font-size: 2rem;
+    .drivers-header h2,
+    .drivers-header p{
+        text-align: center;
     }
 
-    .section-h2 {
+    .book-h2, .contact-header h2{
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+
+    .section-h2, .car-h2{
         font-size: 40px;
     }
 
-    .car-h2 {
+    .drivers-header h2{
         font-size: 40px;
-        margin-left: 55px;
     }
 
-    .book-h2{
-        font-size: 40px;
+    
+    .category-content h2{
+        font-size: 25px;
     }
 }
 
@@ -907,3 +957,8 @@ h2{
     color: #000;
 }
 
+@media (max-width: 400px) {
+    .drivers-header h2, .book-h2 {
+        font-size: 35px;
+    }
+}
