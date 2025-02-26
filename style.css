@@ -407,7 +407,7 @@ header nav .menu a:hover::after {
     background-color: #0d0d0d;
     color: #fff;
     text-align: right; /* Alinea texto hacia la derecha */
-    background-image: url('/img/ruedas-coches-deportivos-suelo-sobre-fondo-negro_312869-112.avif');
+    background-image: url('/img/PATRON1.png');
     background-size: cover;
     background-position: left;
     background-repeat: no-repeat;
@@ -441,7 +441,7 @@ header nav .menu a:hover::after {
     flex-wrap: wrap; /* Permite que se ajusten si no caben */
     justify-content: center; /* Centra las cards horizontalmente */
     gap: 20px; /* Espaciado entre tarjetas */
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: -50px; /* Empuja este contenedor al final de la sección */
 }
 
@@ -495,7 +495,7 @@ header nav .menu a:hover::after {
     color: #fff;
     text-align: center;
     padding:200px 20px;
-    background-image: url(/img/istockphoto-1440163137-640x640.jpg);
+    background-image: url('/img/137732-deportivo-supercoche-golpe_de_estado-salon_del_automovil_de_ginebra-x750.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
