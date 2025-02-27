@@ -661,6 +661,21 @@ header nav .menu a:hover::after {
 }
 
 /* Responsive */
+
+@media (max-width: 810px){
+    .drivers-header{
+        margin-right: 0;
+    }
+
+    .drivers-header h2 {
+        text-align: center;
+    }
+
+    .drivers-header p {
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .hamburger {
         display: block;
